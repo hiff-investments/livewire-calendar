@@ -8,8 +8,10 @@
         {{ $event['title'] }}
     </p>
     <p class="mt-0 text-xs">
-        @if(!isset($event['multiday']) || $event['multiday']!== true)
-            {{$event['date']->format('G:i')}} - {{$event['end']->format('G:i')}}
+        @if(isset($event['multiday']) && $event['multiday'] == true)
+            {{ $event['date']->format('G:i') }} - {{ $event['end']->format('G:i') }}
+        @else
+            {{ $event['date']->format('G:i') }}
         @endif
     </p>
     <p class="mt-2 text-xs">
