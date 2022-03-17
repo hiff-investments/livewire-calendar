@@ -120,7 +120,7 @@ public function events() : Collection
             'description' => 'Off To The Beach!',
             'date' => Carbon::today(),
             'end' => Carbon::today()->addDays(4),
-            'mulitday' => true,
+            'multiday' => true,
         ],
     ]);
 }
